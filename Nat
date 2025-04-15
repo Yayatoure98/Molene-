@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pour toi ❤️</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffe6f0;
+      color: #cc3366;
+      text-align: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .login-box {
+      padding-top: 100px;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #cc3366;
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color: #cc3366;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    .dropdown {
+      margin: 20px auto;
+      width: 300px;
+    }
+
+    details {
+      background: #fff0f5;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 10px rgba(204, 51, 102, 0.2);
+    }
+
+    summary {
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Partie Mot de passe -->
+  <div id="login" class="login-box">
+    <h1>Entre le mot de passe 💌</h1>
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="checkPassword()">Entrer</button>
+  </div>
+
+  <!-- Partie Accueil -->
+  <div id="main" class="hidden">
+    <h1>Bienvenue, Natacha 💖</h1>
+    <p>Voici un petit coin du web rien que pour toi 🌹</p>
+
+    <div class="dropdown">
+      <details>
+        <summary>🌺 Ta beauté</summary>
+        <p>Tu es comme un lever de soleil dans un monde terne.</p>
+        <p>Chaque regard vers toi est un instant suspendu dans le temps.</p>
+      </details>
+
+      <details>
+        <summary>💖 Ton sourire</summary>
+        <p>Ton sourire réchauffe plus que mille étés.</p>
+        <p>Il a le pouvoir de faire fondre les soucis les plus lourds.</p>
+      </details>
+
+      <details>
+        <summary>🌟 Ton âme</summary>
+        <p>Douce, lumineuse, vraie... une âme qui mérite d’être célébrée.</p>
+        <p>Ta bonté rend le monde plus doux.</p>
+      </details>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      if (input === "natacha") {
+        document.getElementById("login").classList.add("hidden");
+        document.getElementById("main").classList.remove("hidden");
+      } else {
+        alert("Mot de passe incorrect 😢");
+      }
+    }
+  </script>
+
+</body>
+</html>
