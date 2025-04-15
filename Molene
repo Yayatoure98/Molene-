@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pour toi 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f8c3d0, #ffe0f0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #d6336c;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+    }
+
+    .box {
+      background: white;
+      padding: 2em;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+    }
+
+    input[type="password"] {
+      padding: 0.5em;
+      border: 2px solid #f8a5c2;
+      border-radius: 8px;
+      margin-bottom: 1em;
+      width: 80%;
+    }
+
+    button {
+      padding: 0.5em 1em;
+      background: #f77ca2;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #hiddenContent {
+      display: none;
+      margin-top: 2em;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Bienvenue mon cœur 💗</h1>
+    <p>Ce petit site est pour toi… mais entre d’abord le mot magique 😘</p>
+    <input type="password" id="password" placeholder="Mot de passe" />
+    <br>
+    <button onclick="checkPassword()">Accéder</button>
+
+    <div id="hiddenContent">
+      <p>💌 Tu as trouvé le bon mot ! Voici quelque chose rien que pour toi :</p>
+      <img id="yourImage" src="image.jpg" alt="Pour toi" />
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("password").value;
+      const correctPassword = "amour2025"; // 🔐 Modifie ici ton mot de passe
+
+      if (password === correctPassword) {
+        document.getElementById("hiddenContent").style.display = "block";
+      } else {
+        alert("Oups, c’est pas le bon mot 🙈");
+      }
+    }
+  </script>
+
+</body>
+</html>
